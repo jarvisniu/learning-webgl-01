@@ -18,11 +18,11 @@ terminal:
 git clone https://github.com/stackgl/learning-webgl-01.git
 cd learning-webgl-01
 npm install
-npm start
+npm run dev
 ```
 
-After running `npm start`, a [wzrd](https://github.com/maxogden/wzrd) server
-should start running on [`http://localhost:9966/`](http://localhost:9966/).
+Then the server
+should start running on [`http://localhost:1234/`](http://localhost:1234/) with live-reload / HMR.
 Enjoy!
 
 ## License

@@ -4,12 +4,12 @@ var gl       = require('gl-context')(canvas, render)
 var glBuffer = require('gl-buffer')
 var mat4     = require('gl-mat4')
 var glShader = require('gl-shader')
-var glslify  = require('glslify')
 
-var shader = glShader(gl,
-  glslify('./shader.vert'),
-  glslify('./shader.frag')
-)
+var fs = require('fs')
+
+var shaderVert = fs.readFileSync(__dirname + '/shader.vert', 'utf-8')
+var shaderFrag = fs.readFileSync(__dirname + '/shader.frag', 'utf-8')
+var shader = glShader(gl, shaderVert, shaderFrag)
 
 var triangleMatrix   = mat4.create()
 var squareMatrix     = mat4.create()
